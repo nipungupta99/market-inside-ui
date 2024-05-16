@@ -1,0 +1,71 @@
+/* Intro Video Section */
+.intro-video {
+  @apply flex flex-col py-10 px-5;
+}
+
+.intro-video__container {
+  @apply container mx-auto;
+}
+
+.intro-video__divider {
+  @apply border border-gray-500;
+}
+
+.intro-video__content {
+  @apply container mx-auto flex flex-wrap md:flex-nowrap gap-14 py-10 md:p-10;
+}
+
+.intro-video__header {
+  @apply flex items-center gap-5;
+}
+
+.intro-video__image-wrapper {
+  @apply w-[130px];
+}
+
+.intro-video__title-wrapper {
+  @apply relative;
+}
+
+.intro-video__title {
+  @apply text-[38px] font-bold leading-[1.3em] text-nowrap;
+}
+
+.intro-video__title--highlight {
+  color: var(--color-highlight);
+}
+
+.intro-video__arrow {
+  @apply absolute ml-[-35px] mt-[-10px];
+}
+
+.intro-video__divider-vertical {
+  @apply hidden md:block border border-gray-700 h-full min-h-[200px];
+}
+
+.intro-video__description {
+  @apply flex flex-col gap-4 justify-center;
+}
+
+.intro-video__text {
+  @apply leading-[1.8em] pt-3;
+}
+
+.intro-video__button {
+  @apply bg-[var(--color-highlight)];
+}
+
+.intro-video__carousel {
+  @apply container mx-auto px-0 md:px-10 mt-20;
+}
+
+.intro-video__carousel-item {
+  @apply ml-20 md:ml-10 flex gap-4 p-3 border border-gray-400 h-[100px] w-[210px] md:w-[230px] rounded-xl;
+  -webkit-box-shadow: inset 1px 7px 20px -10px rgba(166, 159, 166, 1);
+  -moz-box-shadow: inset 1px 7px 20px -10px rgba(166, 159, 166, 1);
+  box-shadow: inset 1px 7px 20px -10px rgba(166, 159, 166, 1);
+}
+
+.intro-video__carousel-description {
+  @apply w-[100px] text-[16px] font-semibold;
+}

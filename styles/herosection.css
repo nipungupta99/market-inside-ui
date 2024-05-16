@@ -1,0 +1,64 @@
+/* Hero Section */
+.hero {
+  @apply flex flex-col;
+}
+
+.hero__container {
+  @apply mx-auto flex justify-center items-center gap-20;
+}
+
+.hero__image-wrapper {
+  @apply hidden md:block;
+}
+
+.hero__content {
+  @apply text-center;
+}
+
+.hero__title {
+  @apply text-5xl font-bold leading-tight;
+  color: var(--color-highlight); /* Orange color for part of the title */
+}
+
+.hero__title--highlight {
+  @apply text-5xl font-bold leading-tight;
+  color: black; /* Black color for highlighted title text */
+}
+
+.hero__divider {
+  @apply border-dashed border border-black my-4;
+}
+
+.hero__subtitle {
+  @apply font-bold text-2xl;
+  color: black; /* Ensuring text color for subtitle */
+}
+
+.hero__email-signup {
+  @apply flex gap-5 my-4;
+}
+
+.hero__input {
+  @apply h-9 px-5 py-1 rounded text-sm font-bold;
+  background-color: #ffffff; /* Changed to white background */
+  color: #ffffff; /* Text color */
+  border: 1px solid #b5b5b5; /* Specified border color */
+}
+
+.hero__button {
+  @apply bg-gray-600; /* Button background color */
+}
+
+.hero__ratings {
+  @apply flex gap-4;
+}
+
+.hero__rating {
+  @apply flex text-lg gap-2 items-center;
+  color: #787878; /* Gray text color for ratings */
+}
+
+.hero__rating--capterra,
+.hero__rating--g2 {
+  @apply items-center;
+}

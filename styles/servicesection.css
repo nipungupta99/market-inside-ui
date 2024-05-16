@@ -1,0 +1,33 @@
+/* Tab Section */
+.tab-section {
+  @apply grid grid-cols-1 md:grid-cols-2;
+}
+
+.tab-section__content {
+  @apply flex flex-col justify-center gap-4  order-2 md:order-1;
+}
+
+.tab-section__title {
+  @apply text-2xl;
+  color: var(--color-highlight);
+  text-decoration: underline;
+  text-decoration-color: var(--color-highlight);
+  text-underline-offset: 8px;
+}
+
+.tab-section__description {
+  @apply text-base;
+}
+
+.tab-section__button {
+  @apply bg-gray-600;
+}
+
+.tab-section__image-wrapper {
+  @apply flex justify-center items-center order-1 md:order-2;
+}
+
+/* Services Section */
+.services__container {
+  @apply container mx-auto;
+}

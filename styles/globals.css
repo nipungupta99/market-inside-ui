@@ -1,33 +1,83 @@
+/* Tailwind Base Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "herosection.css";
+@import "header.css";
+@import "introvideo.css";
+@import "ctasection.css";
+@import "servicesection.css";
+/* Custom Components Layer */
+@layer components {
+  /* Scrollbar Hiding Utility */
+  .no-scrollbar {
+    overflow: hidden; /* Completely hides scrollbars */
+    scrollbar-width: none; /* Hides scrollbars in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbars in Internet Explorer 10+ */
+  }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Hides scrollbars in WebKit browsers */
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  /* React Tabs */
+  .react-tabs .react-tabs__tab-list {
+    @apply mb-[36px] pl-[5%] md:pl-0 whitespace-nowrap overflow-x-scroll md:overflow-x-auto overflow-y-hidden md:whitespace-nowrap no-scrollbar border-b-2;
+  }
+
+  .react-tabs .react-tabs__tab {
+    @apply font-semibold uppercase text-center min-w-[125px] px-[20px] py-[10px] relative inline-block cursor-pointer focus:outline-none border-none;
+  }
+
+  .react-tabs .react-tabs__tab--selected {
+    color: var(--color-highlight);
+    border-bottom: 4px solid var(--color-highlight);
+  }
+
+  .react-tabs .react-tabs__tab:focus::after {
+    width: 0 !important;
+  }
+
+  /* Footer */
+  .footer {
+    @apply bg-black text-white;
+  }
+
+  /* General Sections */
+  .intro-video,
+  .statistics,
+  .import-export-data,
+  .services,
+  .products {
+    @apply py-10 px-5;
+  }
+
+  .services-list,
+  .products-list {
+    @apply flex justify-center gap-2.5;
+  }
+
+  .service,
+  .product,
+  .stat-item {
+    @apply py-2.5 px-2.5 bg-gray-300 rounded-md;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
+/* Custom Utilities Layer */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Root Variables */
+:root {
+  --color-highlight: #f8992f;
+  --foreground-rgb: 0, 0, 0;
+}
+
+/* Base Styles */
+body {
+  @apply text-[rgb(var(--foreground-rgb))];
 }
