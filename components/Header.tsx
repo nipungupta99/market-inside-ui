@@ -4,7 +4,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 
 const Header = () => {
   return (
-    <header className="header   ">
+    <header className="header">
       <nav className="container mx-auto flex justify-between p-4">
         <div className="logo">
           <Image
@@ -28,7 +28,7 @@ const Header = () => {
               <Button className="header-button">LOGIN</Button>
             </li>
             <li>
-              <Button className="header-button--alt">LET'S TALK</Button>
+              <Button className="header-button--alt">LET&apos;S TALK</Button>
             </li>
           </ul>
         </div>
