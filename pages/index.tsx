@@ -30,6 +30,8 @@ interface MyData {
 export const getServerSideProps = async () => {
   try {
     // Fetch data from the API route
+
+    // URL TO BE ADDED IN ENV>>>
     const res = await fetch(
       "https://market-inside-ui.vercel.app/api/home-data"
     );
