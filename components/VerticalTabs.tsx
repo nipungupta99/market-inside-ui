@@ -45,8 +45,8 @@ const VerticalTabs: React.FC<VerticalTabsProps> = ({ tabData }) => {
             </div>
             {tab.content.text && <p>{tab.content.text}</p>}
             <div className="grid grid-cols-3 gap-4 p-10">
-              {tab.content?.data?.map((item: string) => (
-                <p className="flex items-center">
+              {tab.content?.data?.map((item: string, idx: number) => (
+                <p className="flex items-center" key={idx}>
                   <FaCheck /> {item}{" "}
                 </p>
               ))}

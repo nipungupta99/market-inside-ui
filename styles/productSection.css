@@ -49,11 +49,14 @@
 }
 
 .products-section__details-buttons {
-  @apply flex gap-4 my-5;
+  @apply flex  gap-4 my-5;
 }
 
 .products-section__details-button {
   @apply text-black rounded-xl py-3 h-[45px];
+}
+.products-section__details-button--selected {
+  @apply text-black rounded-xl py-3 h-[45px] border border-[#ff8f00];
 }
 
 .products-section__details-description {

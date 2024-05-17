@@ -58,24 +58,26 @@ const ProductsSection = () => {
             <h3 className="products-section__details-title">
               Technological advancements provide a competitive edge
             </h3>
-            <div className="products-section__details-content">
-              <div className="products-section__details-buttons">
-                <Button className="products-section__details-button">
-                  VISUALISE VIEW
-                </Button>
-                <Button className="products-section__details-button">
-                  VIEW PROFILE
-                </Button>
-                <Button className="products-section__details-button">
-                  QUICK VIEW
-                </Button>
+            <div className="products-section__details-content  ">
+              <div>
+                <div className="products-section__details-buttons">
+                  <Button className="products-section__details-button--selected">
+                    VISUALISE VIEW
+                  </Button>
+                  <Button className="products-section__details-button">
+                    VIEW PROFILE
+                  </Button>
+                  <Button className="products-section__details-button">
+                    QUICK VIEW
+                  </Button>
+                </div>
+                <p className="products-section__details-description">
+                  Gather information on international trade in a visually
+                  appealing way. Learn about the market trends easily and get
+                  all the essential information on the import and export of a
+                  country in the form of interactive graphics
+                </p>
               </div>
-              <p className="products-section__details-description">
-                Gather information on international trade in a visually
-                appealing way. Learn about the market trends easily and get all
-                the essential information on the import and export of a country
-                in the form of interactive graphics
-              </p>
               <div className="products-section__details-image">
                 <Image
                   src="/assets/product-image-1.webp"

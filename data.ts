@@ -163,3 +163,47 @@ export const ImportExportData = {
     },
   ],
 };
+
+export const serviceSectiondata = {
+  servicesDescription: `Discover sources of buying products by connecting with potential suppliers while keeping an eye on the shipments through the global trade intelligence platform online.`,
+  serviceImageDetails: {
+    src: "/assets/service-section-image1.webp",
+    alt: "services-section-image",
+    width: 550,
+    height: 550,
+  },
+  tabTitles: [
+    "IMPORTER",
+    "EXPORTER",
+    "LOGISTICS",
+    "LAW FIRMS",
+    "CORPORATIONS",
+    "INSURANCE COMPANIES",
+    "RESEARCH & CONSULTING",
+  ],
+  buttonText: "READ MORE...",
+};
+
+export const productConstants = [
+  {
+    title: "PLATFORM",
+    buttonText: "VISUALISE VIEW",
+    description:
+      "Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics",
+    imgSrc: "/assets/product-image-1.webp",
+  },
+  {
+    title: "API",
+    buttonText: "VIEW PROFILE",
+    description:
+      "Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics",
+    imgSrc: "/assets/product-image-1.webp",
+  },
+  {
+    title: "DATA",
+    buttonText: "QUICK VIEW",
+    description:
+      "Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics",
+    imgSrc: "/assets/product-image-1.webp",
+  },
+];

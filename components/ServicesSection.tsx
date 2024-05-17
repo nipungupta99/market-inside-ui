@@ -2,27 +2,35 @@ import Image from "next/image";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Button from "./Button";
+import { ServiceConstants } from "@/types/ServiceConstantsType";
+// constants/servicesConstants.ts
 
-const TabSection = ({ title }: { title: string }) => {
+const TabSection = ({
+  serviceConstants,
+  title,
+}: {
+  serviceConstants: ServiceConstants;
+  title: string;
+}) => {
   return (
     <div className="tab-section">
       <div className="tab-section__content">
         <h2 className="tab-section__title">{title}</h2>
         <p className="tab-section__description">
-          Discover sources of buying products by connecting with potential
-          suppliers while keeping an eye on the shipments through the global
-          trade intelligence platform online.
+          {serviceConstants.servicesDescription}
         </p>
         <div className="tab-section__button-wrapper">
-          <Button className="tab-section__button">READ MORE...</Button>
+          <Button className="tab-section__button">
+            {serviceConstants.buttonText}
+          </Button>
         </div>
       </div>
       <div className="tab-section__image-wrapper">
         <Image
-          src="/assets/service-section-image1.webp"
-          alt="services-section-image"
-          width="550"
-          height="550"
+          src={serviceConstants.serviceImageDetails.src}
+          alt={serviceConstants.serviceImageDetails.alt}
+          width={serviceConstants.serviceImageDetails.width}
+          height={serviceConstants.serviceImageDetails.height}
           className="tab-section__image"
         />
       </div>
@@ -30,42 +38,22 @@ const TabSection = ({ title }: { title: string }) => {
   );
 };
 
-const ServicesSection = () => {
+const ServicesSection = ({ serviceConstants }: { serviceConstants: any }) => {
   return (
     <section className="services">
       <div className="services__container">
         <Tabs>
           <TabList>
-            <Tab>IMPORTER</Tab>
-            <Tab>EXPORTER</Tab>
-            <Tab>LOGISTICS</Tab>
-            <Tab>LAW FIRMS</Tab>
-            <Tab>CORPORATIONS</Tab>
-            <Tab>INSURANCE COMPANIES</Tab>
-            <Tab>RESEARCH & CONSULTING</Tab>
+            {serviceConstants.tabTitles.map((title: string) => (
+              <Tab key={title}>{title}</Tab>
+            ))}
           </TabList>
 
-          <TabPanel>
-            <TabSection title="IMPORTER" />
-          </TabPanel>
-          <TabPanel>
-            <TabSection title="EXPORTER" />
-          </TabPanel>
-          <TabPanel>
-            <TabSection title="LOGISTICS" />
-          </TabPanel>
-          <TabPanel>
-            <TabSection title="LAW FIRMS" />
-          </TabPanel>
-          <TabPanel>
-            <TabSection title="CORPORATIONS" />
-          </TabPanel>
-          <TabPanel>
-            <TabSection title="INSURANCE COMPANIES" />
-          </TabPanel>
-          <TabPanel>
-            <TabSection title="RESEARCH & CONSULTING" />
-          </TabPanel>
+          {serviceConstants.tabTitles.map((title: string) => (
+            <TabPanel key={title}>
+              <TabSection title={title} serviceConstants={serviceConstants} />
+            </TabPanel>
+          ))}
         </Tabs>
       </div>
     </section>
