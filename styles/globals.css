@@ -8,6 +8,7 @@
 @import "ctasection.css";
 @import "servicesection.css";
 @import "footer.css";
+@import "productSection.css";
 /* Custom Components Layer */
 @layer components {
   /* Scrollbar Hiding Utility */
