@@ -1,52 +1,54 @@
 import Image from "next/image";
 import Button from "./Button";
+import { HeroData } from "@/types/heroSectionType";
 
-const HeroSection = () => {
+const HeroSection = ({ heroData }: { heroData: HeroData }) => {
   return (
     <section className="hero">
       <div className="hero__container">
         <div className="hero__image-wrapper">
           <Image
-            src="/assets/hero-image-1.webp"
-            alt="hero-image"
-            width="500"
-            height="500"
+            src={heroData.imageSrc}
+            alt={heroData.imageAlt}
+            width={heroData.imageWidth}
+            height={heroData.imageHeight}
           />
         </div>
         <div className="hero__content">
           <h1 className="hero__title">
-            <span className="hero__title--highlight">GET ACCESS OF</span>
-            <br /> MARKET <br /> INTELLIGENCE <br /> PLATFORM
+            <span className="hero__title--highlight">
+              {heroData.title.highlight}
+            </span>
+            <br /> {heroData.title.lines[0]} <br /> {heroData.title.lines[1]}{" "}
+            <br /> {heroData.title.lines[2]}
           </h1>
           <hr className="hero__divider" />
-          <p className="hero__subtitle">GROW YOUR BUSINESS</p>
+          <p className="hero__subtitle">{heroData.subtitle}</p>
           <div className="hero__email-signup">
             <input
               type="email"
-              placeholder="ENTER YOUR EMAIL"
+              placeholder={heroData.emailPlaceholder}
               className="hero__input"
             />
-            <Button className="hero__button">FREE TRIAL</Button>
+            <Button className="hero__button">{heroData.buttonLabel}</Button>
           </div>
           <div className="hero__ratings">
-            <span className="hero__rating hero__rating--capterra">
-              <Image
-                src="/assets/capterra-inc-logo.webp"
-                alt="capterra-rating"
-                height="7"
-                width="96"
-              />
-              ★★★★
-            </span>
-            <span className="hero__rating hero__rating--g2">
-              <Image
-                src="/assets/G2-inc-logo.webp"
-                alt="g2-rating"
-                height="5"
-                width="25"
-              />
-              ★★★★★
-            </span>
+            {heroData.ratings.map((rating, index) => (
+              <span
+                key={index}
+                className={`hero__rating hero__rating--${
+                  rating.alt.split("-")[0]
+                }`}
+              >
+                <Image
+                  src={rating.src}
+                  alt={rating.alt}
+                  height={rating.height}
+                  width={rating.width}
+                />
+                {rating.stars}
+              </span>
+            ))}
           </div>
         </div>
       </div>

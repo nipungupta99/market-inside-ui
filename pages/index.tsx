@@ -5,14 +5,15 @@ import ServicesSection from "../components/ServicesSection";
 import ProductsSection from "../components/ProductsSection";
 import CallToActionSection from "../components/CallToActionSection";
 import useDeviceType from "@/hooks/useDeviceType";
+import { ImportExportData, heroData, introVideoData } from "@/data";
 
 const Home = () => {
   const isMobile = useDeviceType();
   return (
     <>
-      <HeroSection />
-      <IntroVideoSection />
-      {!isMobile && <ImportExportDataSection />}
+      <HeroSection heroData={heroData} />
+      <IntroVideoSection introVideoData={introVideoData} />
+      {!isMobile && <ImportExportDataSection sectionData={ImportExportData} />}
       <ServicesSection />
       <ProductsSection />
       <CallToActionSection />

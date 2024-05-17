@@ -2,6 +2,8 @@ import Image from "next/image";
 import Button from "./Button";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { CarouselItemData, IntroVideoData } from "@/types/introVideoType";
+import React from "react";
 
 const responsive = {
   superLargeDesktop: {
@@ -22,13 +24,7 @@ const responsive = {
   },
 };
 
-const CarouselItem = ({
-  src,
-  description,
-}: {
-  src: string;
-  description: string;
-}) => {
+const CarouselItem = ({ src, description }: CarouselItemData) => {
   return (
     <div className="intro-video__carousel-item">
       <Image src={src} alt="intro-carousel-item" height="30" width="80" />
@@ -37,81 +33,61 @@ const CarouselItem = ({
   );
 };
 
-const IntroVideoSection = () => {
+const IntroVideoSection = ({
+  introVideoData,
+}: {
+  introVideoData: IntroVideoData;
+}) => {
   return (
     <section className="intro-video">
       <div className="intro-video__container">
         <hr className="intro-video__divider" />
       </div>
+
       <div className="intro-video__content">
         <div className="intro-video__header">
           <div className="intro-video__image-wrapper">
             <Image
-              src="/assets/intro-image-1.webp"
-              alt="intro-video"
-              width="130"
-              height="130"
+              {...introVideoData.introImage}
               className="intro-video__image"
             />
           </div>
           <div className="intro-video__title-wrapper">
             <h1 className="intro-video__title">
-              SET THE <br /> MARKETS <br />
-              <span className="intro-video__title--highlight">IN</span> MOTION
+              {introVideoData.title.map((line: string, i: number) => (
+                <React.Fragment key={i}>
+                  {line} <br />
+                </React.Fragment>
+              ))}
+              <span className="intro-video__title--highlight">
+                {introVideoData.titleHighlight}
+              </span>
             </h1>
             <Image
-              src="/assets/intro-arrow.webp"
-              alt="intro-arrow"
-              height="40"
-              width="140"
+              {...introVideoData.arrowImage}
               className="intro-video__arrow"
             />
           </div>
         </div>
         <div className="intro-video__divider-vertical" />
         <div className="intro-video__description">
-          <p className="intro-video__text">
-            Get a comprehensive view of international trade between countries to
-            set your business in a particular direction and drive growth for
-            your business while keeping up to date with the latest information.
-            Watch the video from Market Inside, providing its introduction with
-            a quick glance at how our services help businesses.
-          </p>
-          <div>
-            <Button className="intro-video__button">SCHEDULE A DEMO</Button>
-          </div>
+          <p className="intro-video__text">{introVideoData.description}</p>
+          <Button className="intro-video__button">
+            {introVideoData.buttonText}
+          </Button>
         </div>
       </div>
       <div className="intro-video__carousel">
         <Carousel responsive={responsive}>
-          <CarouselItem
-            src="/assets/intro-slider-icon-1.webp"
-            description="2B+ Shipments Count"
-          />
-          <CarouselItem
-            src="/assets/intro-slider-icon-2.webp"
-            description="3M Total Exporter Importer"
-          />
-          <CarouselItem
-            src="/assets/intro-slider-icon-3.webp"
-            description="195+ Countries Trade Data"
-          />
-          <CarouselItem
-            src="/assets/intro-slider-icon-4.webp"
-            description="Global Trade Data"
-          />
-          <CarouselItem
-            src="/assets/intro-slider-icon-4.webp"
-            description="Global Trade Data"
-          />
-          <CarouselItem
-            src="/assets/intro-slider-icon-4.webp"
-            description="Global Trade Data"
-          />
-          <CarouselItem
-            src="/assets/intro-slider-icon-4.webp"
-            description="Global Trade Data"
-          />
+          {introVideoData.carouselItems.map(
+            (item: CarouselItemData, index: number) => (
+              <CarouselItem
+                key={index}
+                src={item.src}
+                description={item.description}
+              />
+            )
+          )}
         </Carousel>
       </div>
     </section>
