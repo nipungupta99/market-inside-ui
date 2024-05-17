@@ -7,6 +7,7 @@
 @import "introvideo.css";
 @import "ctasection.css";
 @import "servicesection.css";
+@import "footer.css";
 /* Custom Components Layer */
 @layer components {
   /* Scrollbar Hiding Utility */
@@ -36,11 +37,6 @@
 
   .react-tabs .react-tabs__tab:focus::after {
     width: 0 !important;
-  }
-
-  /* Footer */
-  .footer {
-    @apply bg-black text-white;
   }
 
   /* General Sections */
