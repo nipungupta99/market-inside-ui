@@ -9,6 +9,8 @@
 @import "servicesection.css";
 @import "footer.css";
 @import "productSection.css";
+@import "verticaltabs.css";
+@import "importExportSection.css";
 /* Custom Components Layer */
 @layer components {
   /* Scrollbar Hiding Utility */

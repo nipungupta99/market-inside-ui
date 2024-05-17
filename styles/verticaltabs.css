@@ -1,0 +1,27 @@
+.vertical-tabs {
+  display: flex;
+}
+
+.vertical-tablist {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  /* border-right: 1px solid #ccc; */
+}
+
+.react-tabs__tab-panel react-tabs__tab-panel--selected {
+  padding: 0 !important;
+}
+
+.vertical-tablist .react-tabs__tab {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.vertical-tablist .react-tabs__tab--selected {
+  background-color: #ddd;
+}
+
+.vertical-tab-panel-container {
+  @apply flex flex-col gap-5 border border-[#ff8f00] h-full w-[calc(100vw-250px)] rounded-md;
+}

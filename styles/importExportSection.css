@@ -1,0 +1,23 @@
+.import-export-data {
+  @apply py-10;
+}
+
+.import-export-data__container {
+  @apply container mx-auto md:p-0 px-5;
+}
+
+.import-export-data__title {
+  @apply text-[32px] font-bold;
+}
+
+.import-export-data__title--highlight {
+  @apply text-[#A0A0A0] leading-[1.2em];
+}
+
+.import-export-data__description {
+  @apply text-[#6D6D6D] leading-[1.9em] tracking-wide py-3;
+}
+
+.import-export-data__tabs {
+  @apply py-10;
+}
