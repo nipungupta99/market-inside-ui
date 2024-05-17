@@ -4,7 +4,7 @@
 }
 
 .hero__container {
-  @apply mx-auto flex justify-center items-center gap-20;
+  @apply mx-auto flex justify-center items-center gap-20 md:p-0 p-4;
 }
 
 .hero__image-wrapper {
@@ -16,12 +16,12 @@
 }
 
 .hero__title {
-  @apply text-5xl font-bold leading-tight;
+  @apply text-4xl md:text-5xl font-bold leading-tight md:py-0 py-10;
   color: var(--color-highlight); /* Orange color for part of the title */
 }
 
 .hero__title--highlight {
-  @apply text-5xl font-bold leading-tight;
+  @apply font-bold leading-tight;
   color: black; /* Black color for highlighted title text */
 }
 
@@ -35,7 +35,7 @@
 }
 
 .hero__email-signup {
-  @apply flex gap-5 my-4;
+  @apply flex flex-wrap justify-center gap-5 my-4;
 }
 
 .hero__input {
@@ -50,7 +50,7 @@
 }
 
 .hero__ratings {
-  @apply flex gap-4;
+  @apply flex gap-4 md:justify-start justify-center;
 }
 
 .hero__rating {
