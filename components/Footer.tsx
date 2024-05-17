@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer__logo-container">
           <div className="footer__logo-wrapper">
             <Image
-              src="/assets/footer-logo.png"
+              src="/assets/footer-logo.webp"
               alt="footer-logo"
               width="230"
               height="230"

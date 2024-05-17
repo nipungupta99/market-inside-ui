@@ -47,7 +47,7 @@ const IntroVideoSection = () => {
         <div className="intro-video__header">
           <div className="intro-video__image-wrapper">
             <Image
-              src="/assets/intro-image-1.png"
+              src="/assets/intro-image-1.webp"
               alt="intro-video"
               width="130"
               height="130"
@@ -60,7 +60,7 @@ const IntroVideoSection = () => {
               <span className="intro-video__title--highlight">IN</span> MOTION
             </h1>
             <Image
-              src="/assets/intro-arrow.png"
+              src="/assets/intro-arrow.webp"
               alt="intro-arrow"
               height="40"
               width="140"
@@ -85,31 +85,31 @@ const IntroVideoSection = () => {
       <div className="intro-video__carousel">
         <Carousel responsive={responsive}>
           <CarouselItem
-            src="/assets/intro-slider-icon-1.png"
+            src="/assets/intro-slider-icon-1.webp"
             description="2B+ Shipments Count"
           />
           <CarouselItem
-            src="/assets/intro-slider-icon-2.png"
+            src="/assets/intro-slider-icon-2.webp"
             description="3M Total Exporter Importer"
           />
           <CarouselItem
-            src="/assets/intro-slider-icon-3.png"
+            src="/assets/intro-slider-icon-3.webp"
             description="195+ Countries Trade Data"
           />
           <CarouselItem
-            src="/assets/intro-slider-icon-4.png"
+            src="/assets/intro-slider-icon-4.webp"
             description="Global Trade Data"
           />
           <CarouselItem
-            src="/assets/intro-slider-icon-4.png"
+            src="/assets/intro-slider-icon-4.webp"
             description="Global Trade Data"
           />
           <CarouselItem
-            src="/assets/intro-slider-icon-4.png"
+            src="/assets/intro-slider-icon-4.webp"
             description="Global Trade Data"
           />
           <CarouselItem
-            src="/assets/intro-slider-icon-4.png"
+            src="/assets/intro-slider-icon-4.webp"
             description="Global Trade Data"
           />
         </Carousel>

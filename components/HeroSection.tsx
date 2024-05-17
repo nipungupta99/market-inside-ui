@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="hero__container">
         <div className="hero__image-wrapper">
           <Image
-            src="/assets/hero-image-1.png"
+            src="/assets/hero-image-1.webp"
             alt="hero-image"
             width="500"
             height="500"
@@ -31,7 +31,7 @@ const HeroSection = () => {
           <div className="hero__ratings">
             <span className="hero__rating hero__rating--capterra">
               <Image
-                src="/assets/capterra-inc-logo.png"
+                src="/assets/capterra-inc-logo.webp"
                 alt="capterra-rating"
                 height="7"
                 width="96"
@@ -40,7 +40,7 @@ const HeroSection = () => {
             </span>
             <span className="hero__rating hero__rating--g2">
               <Image
-                src="/assets/G2-inc-logo.png"
+                src="/assets/G2-inc-logo.webp"
                 alt="g2-rating"
                 height="5"
                 width="25"

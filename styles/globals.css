@@ -38,26 +38,6 @@
   .react-tabs .react-tabs__tab:focus::after {
     width: 0 !important;
   }
-
-  /* General Sections */
-  .intro-video,
-  .statistics,
-  .import-export-data,
-  .services,
-  .products {
-    @apply py-10 px-5;
-  }
-
-  .services-list,
-  .products-list {
-    @apply flex justify-center gap-2.5;
-  }
-
-  .service,
-  .product,
-  .stat-item {
-    @apply py-2.5 px-2.5 bg-gray-300 rounded-md;
-  }
 }
 
 /* Custom Utilities Layer */

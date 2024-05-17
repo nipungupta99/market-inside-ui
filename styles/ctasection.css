@@ -1,12 +1,9 @@
 /* Call to Action Section */
 .call-to-action {
-  background-image: url("/assets/cta-section-bg.png");
+  @apply py-10 pb-20 md:pb-10;
+  background-image: url("/assets/cta-section-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.call-to-action {
-  @apply py-10;
 }
 
 .call-to-action__container {

@@ -19,7 +19,7 @@ const TabSection = ({ title }: { title: string }) => {
       </div>
       <div className="tab-section__image-wrapper">
         <Image
-          src="/assets/service-section-image1.png"
+          src="/assets/service-section-image1.webp"
           alt="services-section-image"
           width="550"
           height="550"

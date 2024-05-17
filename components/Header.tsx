@@ -8,7 +8,7 @@ const Header = () => {
       <nav className="container mx-auto flex justify-between p-4">
         <div className="logo">
           <Image
-            src="/assets/header-logo.png"
+            src="/assets/header-logo.webp"
             alt="header-logo"
             width="150"
             height="150"
